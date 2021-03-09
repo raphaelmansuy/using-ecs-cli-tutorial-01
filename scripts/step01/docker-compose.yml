@@ -1,0 +1,13 @@
+version: "2"
+services:
+  webdemo:
+    image: "amazon/amazon-ecs-sample"
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs
+      options:
+         awslogs-group: tutorial
+         awslogs-region: us-west-2
+         awslogs-stream-prefix: demo
+
